@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\PermisoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,6 +12,9 @@
 |
 */
 
+
+
+Route::get('permiso/{nombre}', 'PermisoController@index');
 Route::get('/', function () {
     return view('welcome');
 });
