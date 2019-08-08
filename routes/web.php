@@ -13,8 +13,10 @@ use App\Http\Controllers\PermisoController;
 */
 
 
-
+Route::get('/', 'InicioController@index');
 Route::get('permiso/{nombre}', 'PermisoController@index');
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
