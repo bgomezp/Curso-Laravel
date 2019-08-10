@@ -14,7 +14,9 @@ use App\Http\Controllers\PermisoController;
 
 
 Route::get('/', 'InicioController@index');
-Route::get('permiso/{nombre}', 'PermisoController@index');
+Route::get('admin/permiso/', 'Admin\PermisoController@index')->name('permiso');
+Route::get('admin/permiso/crear', 'Admin\PermisoController@crear')->name('crear_permiso');
+
 /*
 Route::get('/', function () {
     return view('welcome');
