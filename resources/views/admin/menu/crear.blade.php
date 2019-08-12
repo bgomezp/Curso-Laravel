@@ -10,7 +10,8 @@ Menu
                 <h3 class="box-title">Crear Menu</h3>
             </div>
             <!-- /.box-header -->
-            <form class="form-horizontal">
+            <form action="{{ route('guardar_menu')}}" class="form-horizontal" method="POST">
+                @csrf
                 <div class="box-body ">
                     @include('admin.menu.form')
                 </div>
