@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\ValidaMenuUrl;
 
 class ValidacionMenu extends FormRequest
 {
@@ -24,17 +25,9 @@ class ValidacionMenu extends FormRequest
     public function rules()
     {
         return [
-            'nombre' => 'required|unique:menu|max:50',
-            'url' => 'required|max:100',
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-            'nombre.required' => 'El nombre es requerido',
-            'nombre.unique' => 'El nombre debe ser unioc y ya existe otro igual',
-            'url.required'  => 'la url es requerida',
+            'nombre' => 'required|max:50|unique:menu,nombre, '.$this->route('id'),
+            'url' => ['required','max:100', new ValidaMenuUrl],
+            'icono' => 'nullable|max:50'
         ];
     }
 }

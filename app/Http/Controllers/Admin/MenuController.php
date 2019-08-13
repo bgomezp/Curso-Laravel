@@ -38,7 +38,9 @@ class MenuController extends Controller
     public function guardar(ValidacionMenu $request)
     {
         // guardar los campos que viene del formualrio en al tabal atarvses del modelo Menu
-        $validated = $request->validated();
+        //$validated = $request->validated(); //validar los campos a atrevs de FormRequestValiation llamado ValidacionMenu
+        Menu::create($request->all());
+        return redirect('admin/menu/crear')->with('mensaje','Menu creado con exito');
     }
 
     /**
@@ -72,7 +74,7 @@ class MenuController extends Controller
      */
     public function actualizar(Request $request, $id)
     {
-        //
+        return redirect('admin/menu')->with('mensaje','Menu actualizado con exito');
     }
 
     /**
