@@ -80,6 +80,13 @@
     <script src="{{ asset("assets/$theme/dist/js/adminlte.min.js") }}"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset("assets/$theme/dist/js/demo.js") }}"></script>
+    <!-- arhcivo js para validacion del lado del cliete   -->
+    <script src="{{ asset("assets/js/jquery-validation/jquery.validate.min.js") }}"></script>
+    <!-- archivo js para los mensajes en español de validacion    -->
+    <script src="{{ asset("assets/js/jquery-validation/localization/messages_es.js") }}"></script>
+    <!-- archivo js para validar en form ageneral caa formulario con sus deiversos campos de entrada   -->
+    <script src="{{ asset("assets/js/funciones.js") }}"></script>
+    
     <!-- un yield para agreagr archivo s.js qeu se requieran para al pagina  -->
     @yield('scripts')
 </body>

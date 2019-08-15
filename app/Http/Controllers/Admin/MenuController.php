@@ -16,7 +16,9 @@ class MenuController extends Controller
      */
     public function index()
     {
-        //
+        $menus = Menu::orderBy('id')->get(); //caragr dtos e tbaal o modelo Menu 
+        return view('admin.menu.index',compact('menus')); //llamr al avisat para mostar datos
+
     }
 
     /**
@@ -37,6 +39,8 @@ class MenuController extends Controller
      */
     public function guardar(ValidacionMenu $request)
     {
+        // el ValidaMenu hace automaticmante la validacion con $request
+
         // guardar los campos que viene del formualrio en al tabal atarvses del modelo Menu
         //$validated = $request->validated(); //validar los campos a atrevs de FormRequestValiation llamado ValidacionMenu
         Menu::create($request->all());

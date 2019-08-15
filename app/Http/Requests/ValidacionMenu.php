@@ -26,7 +26,7 @@ class ValidacionMenu extends FormRequest
     {
         return [
             'nombre' => 'required|max:50|unique:menu,nombre, '.$this->route('id'),
-            'url' => ['required','max:100', new ValidaMenuUrl],
+            'url' => ['required','max:100', new ValidaMenuUrl], //llamar una regla  evalidacion especifica 
             'icono' => 'nullable|max:50'
         ];
     }
