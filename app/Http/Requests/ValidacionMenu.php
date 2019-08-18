@@ -30,4 +30,12 @@ class ValidacionMenu extends FormRequest
             'icono' => 'nullable|max:50'
         ];
     }
+    // mensajes persoalizadas atrave sde esta funcion
+    public function messages()
+    {
+        return [
+            'nombre.required' => 'Nombre es obligatorio ',
+            'url.required' => 'Url  es obligatoria '
+        ];
+    }
 }

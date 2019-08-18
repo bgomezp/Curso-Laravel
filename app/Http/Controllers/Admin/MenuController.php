@@ -37,9 +37,9 @@ class MenuController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function guardar(ValidacionMenu $request)
+    public function guardar(ValidacionMenu  $request)
     {
-        // el ValidaMenu hace automaticmante la validacion con $request
+        // el ValidaMenu hace automaticmante la validacion con $request. este s ecrea con php artisan make:request NombreValidacion
 
         // guardar los campos que viene del formualrio en al tabal atarvses del modelo Menu
         //$validated = $request->validated(); //validar los campos a atrevs de FormRequestValiation llamado ValidacionMenu

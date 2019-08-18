@@ -2,11 +2,15 @@
 @section('titulo')
 Menu
 @endsection
+<!-- Agregar el script de crear para llamar la validacion geeral del formulario   -->
+@section('scripts')
+<script src="{{ asset("assets/pages/admin/crear.js") }}" type="text/javascript"></script>
+@endsection
 @section('content')
 <div class="row">
     <div class="col-md-12">
         @include('includes/form-error')
-        @include('includes/mensaje')
+        <!-- @include('includes/mensaje') -->
 
         <div class="box box-danger">
             <div class="box-header with-border">

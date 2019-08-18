@@ -83,7 +83,7 @@
     <!-- arhcivo js para validacion del lado del cliete   -->
     <script src="{{ asset("assets/js/jquery-validation/jquery.validate.min.js") }}"></script>
     <!-- archivo js para los mensajes en español de validacion    -->
-    <script src="{{ asset("assets/js/jquery-validation/localization/messages_es.js") }}"></script>
+    <script src="{{ asset("assets/js/jquery-validation/localization/messages_es.min.js") }}"></script>
     <!-- archivo js para validar en form ageneral caa formulario con sus deiversos campos de entrada   -->
     <script src="{{ asset("assets/js/funciones.js") }}"></script>
     
